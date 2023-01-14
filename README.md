@@ -1,5 +1,8 @@
 # eg2023ctf writeup
 
+<img width="1169" alt="image" src="https://user-images.githubusercontent.com/34196370/212497178-b12bed32-e468-4d3f-b295-e04c763720a5.png">
+
+
 # Programming
 
 ## RIGOROUS
