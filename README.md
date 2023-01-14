@@ -68,8 +68,7 @@ seead%3L%2Q%2Qjzfef.mp%2QL8514L7O0N7N5724L545712M031P42O5M545O5023N1P96M49924079
 secret key = ryvgrtubfggggggg
 ```
 
-![[Pasted image 20230114161521.png]]
-
+<img width="576" alt="Pasted image 20230114161521" src="https://user-images.githubusercontent.com/34196370/212496363-df4d7e89-f8ff-4f12-a24e-c4b074427025.png">
 
 In flag.txt, there are  long strings and secretkey. Also we were given an image. Looking at that image given we know that it is the Visualization of the AES round function after some googling. So we need to decrypt the aes cipher in the text file. But, the long strings provided is not a valid aes cipher because it does not appear to be a properly encoded ciphertext, as it contains a mix of letters, numbers and special characters. 
 
@@ -116,7 +115,7 @@ https://youtu.be/sBunr6FF9QY
 The link lands to a video titled [The Feeling That Never Gets Old.](https://youtu.be/sBunr6FF9QY) The flag is at 2:25 where a pastebin link will pop up very fast. I got it using my sharingan eye xp
 
 
-![[Pasted image 20230114164349.png]]
+<img width="836" alt="Pasted image 20230114164349" src="https://user-images.githubusercontent.com/34196370/212496414-4a451462-260d-43a3-a30a-f255c70dc2e1.png">
 
 
 ## Bitcoin
@@ -136,7 +135,7 @@ y²=x³+7
 
 Using this equation, we can get the shape of the curve for ECC in bitcoin:
 
-![[Pasted image 20230114170129.png]]
+<img width="403" alt="Pasted image 20230114170129" src="https://user-images.githubusercontent.com/34196370/212496435-553487b3-3921-49bb-9c1b-9d5c4b8788b1.png">
 
 
 From the formula, we can see that there are two graph points were given (x,y) as follows:
@@ -148,7 +147,7 @@ From the formula, we can see that there are two graph points were given (x,y) as
 
 Then plot the lines for these two points where first line x=0, y= 2.646 and second line x=0,y=-2.646. Result:
 
-![[Pasted image 20230114170516.png]]
+<img width="673" alt="Pasted image 20230114170516" src="https://user-images.githubusercontent.com/34196370/212496449-0f4b768b-b8b5-4115-a3bb-01cc2f4db8af.png">
 
 It turns out the alphabet is letter _C_. The ascii value of C is 67. Then we can include it into the next calculation to get the password:
 
@@ -276,7 +275,7 @@ Then includes the values into the next formula to find the next coordinate. From
 
 So the graph will look like this:
 
-![[Pasted image 20230114184603.png]]
+<img width="776" alt="Pasted image 20230114184603" src="https://user-images.githubusercontent.com/34196370/212496468-0a322fb9-7e80-41c6-954a-ee27ebc11ccb.png">
 
 From this graph we know that av = "F" in ascii value it will be 70. Since we have the value of av, we can proceed to the next formula to find the initial value of r:
 
@@ -314,19 +313,19 @@ Use the password to extract the flag in flag.zip.
 
 We were given a website [https://eliteghost.tech/fun-fair/](https://eliteghost.tech/fun-fair/).
 
-![[Pasted image 20230114190949.png]]
+<img width="1603" alt="Pasted image 20230114190949" src="https://user-images.githubusercontent.com/34196370/212496481-b4f3ae0f-5c3a-477c-9180-6fccb0bbd066.png">
 
 Lets check for any error if we give wrong input:
 
-![[Pasted image 20230114191051.png]]
+<img width="1143" alt="Pasted image 20230114191051" src="https://user-images.githubusercontent.com/34196370/212496492-fb57352d-e9f4-4ed7-ba9b-5f7b441ba806.png">
 
 Aha, so we need to give the correct phrase. To find the correct phrase we will need to intercept the request send it to intruder and start bruteforcing:
 
-![[Pasted image 20230114200626.png]]
+<img width="536" alt="Pasted image 20230114200626" src="https://user-images.githubusercontent.com/34196370/212496508-0035c66d-6665-4103-abb2-254046670b9a.png">
 
 We got the correct phrase which is `success`. But now it gives us new error:
 
-![[Pasted image 20230114200750.png]]
+<img width="890" alt="Pasted image 20230114200750" src="https://user-images.githubusercontent.com/34196370/212496522-666c61d8-edec-40e6-a807-50651abfd4e9.png">
 
 So we know now we gonna need a valid token. Now lets check for other directories using dirb and we get:
 
@@ -337,7 +336,7 @@ https://eliteghost.tech/fun-fair/hacking/
 
 Lets check what is in cookies/
 
-![[Pasted image 20230114201816.png]]
+<img width="963" alt="Pasted image 20230114201816" src="https://user-images.githubusercontent.com/34196370/212496550-f7d1e543-6a5c-4e8c-9720-95dfe1c6af8a.png">
 
 Aha, so we need to set the cookie to:
 
@@ -348,7 +347,7 @@ value: horsewheel
 
 Then let’s check on hacking/
 
-![[Pasted image 20230114201856.png]]
+<img width="1175" alt="Pasted image 20230114201856" src="https://user-images.githubusercontent.com/34196370/212496561-b80691f4-7f03-4938-a7c5-ffb4ad1c5d58.png">
 
 So the valid token is in this site. Now lets check the source code. The site doesnt allow us to right click to inspect element. But, we can bypass this by adding `view-source` at the beginning of the url and we get the source code. Scroll down untill u see a long base64 strings:
 
@@ -356,58 +355,58 @@ So the valid token is in this site. Now lets check the source code. The site doe
 view-source:https://eliteghost.tech/fun-fair/hacking/
 ```
 
-![[Pasted image 20230114202208.png]]
+<img width="1476" alt="Pasted image 20230114202208" src="https://user-images.githubusercontent.com/34196370/212496571-617ec75b-5997-4a3c-af05-991e0179aff2.png">
 
 Decode the strings and put it into token input and click generate token. Now everything is set:
 
-![[Pasted image 20230114202733.png]]
+<img width="599" alt="Pasted image 20230114202733" src="https://user-images.githubusercontent.com/34196370/212496580-a1cf4c7c-88ac-47af-80c8-aec0108f2fcb.png">
 
 Send the request and we get the flag which is in base64:
 
-![[Pasted image 20230114202757.png]]
+<img width="1451" alt="Pasted image 20230114202757" src="https://user-images.githubusercontent.com/34196370/212496590-86c5e96a-2d71-4c08-87a7-9d00b9567b95.png">
 
 
 ## Digital Karma
 Going to the link will land us to a login page:
 
-![[Pasted image 20230114203523.png]]
+<img width="450" alt="Pasted image 20230114203523" src="https://user-images.githubusercontent.com/34196370/212496604-0067a6f5-f764-4168-b2e1-6ffdde0e398c.png">
 
 If we give the wrong input the page redirect us to [https://eliteghost.tech/ctf/web/sourceorsauce/](https://eliteghost.tech/ctf/web/sourceorsauce/) with 404 not found page:
 
-![[Pasted image 20230114203737.png]]
+<img width="708" alt="Pasted image 20230114203737" src="https://user-images.githubusercontent.com/34196370/212496613-b3a43eed-dfac-4801-a05f-17748fc417cd.png">
 
 So I check for the source code for any authentication checking but got nothing. To check the source we cannot right click to inspect element, we can use the same method as we do for funfair challenge or intercept response request on burp.
 We can see that it only checks if the user or/and password field is empty. Also the page is disabling the ability for  user to select text, as well as disabling the right-click context menu:
 
-![[Pasted image 20230114204553.png]]
+<img width="463" alt="Pasted image 20230114204553" src="https://user-images.githubusercontent.com/34196370/212496620-7958d325-2017-4848-affe-c1e90c71a912.png">
 
-![[Pasted image 20230114204411.png]]
+<img width="490" alt="Pasted image 20230114204411" src="https://user-images.githubusercontent.com/34196370/212496638-bdaae22d-145b-4413-97ac-9cad74184b93.png">
 
 
 After that i decided to  fuzz the directory using dirb, we get /admin page that has directory listing:
 
-![[Pasted image 20230114204912.png]]
+<img width="650" alt="Pasted image 20230114204912" src="https://user-images.githubusercontent.com/34196370/212496712-66398080-ba48-41c7-9c9e-e57f75558254.png">
 
 But the content in both directory returns:
 
-![[Pasted image 20230114204937.png]]
+<img width="168" alt="Pasted image 20230114204937" src="https://user-images.githubusercontent.com/34196370/212496724-86645126-454b-4f0e-ae83-2542ef3886c0.png">
 
 From the hint, we know that there is js script somewhere. So we can fuzz recursively for js file using ffuf with this [wordlist]([https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/SVNDigger/cat/Language/js.txt](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/SVNDigger/cat/Language/js.txt)) at admin/user/ and admin/pass/. Aha, we got a hit at admin/user/ there is a file named `script.js`:
 
-![[Pasted image 20230114205312.png]]
+<img width="650" alt="Pasted image 20230114204912" src="https://user-images.githubusercontent.com/34196370/212496651-5bbf4715-a17c-46e5-853d-30746611332b.png">
 
 Lets view the content of `script.js` file and we found strings which could be the username and password for the login page:
 
-![[Pasted image 20230114205616.png]]
+<img width="1012" alt="Pasted image 20230114205616" src="https://user-images.githubusercontent.com/34196370/212496659-7c5db2fb-5621-4bcf-916f-059ca16a91ba.png">
 
 Test the credential found at the login page and we will be redirected to different page sourceorsauce/memberjaya.php:
 
-![[Pasted image 20230114205914.png]]
+<img width="444" alt="Pasted image 20230114205914" src="https://user-images.githubusercontent.com/34196370/212496674-181ac551-f825-4f8b-a984-92956e860367.png">
 
-![[Pasted image 20230114210112.png]]
+<img width="836" alt="Pasted image 20230114210112" src="https://user-images.githubusercontent.com/34196370/212496683-9494cb4e-1bfc-44af-bec3-07f7c87045b4.png">
 
 Go to  `digitalkarma/memberjaya.php` instead of `sourceorsauce/memberjaya.php`and we are through:
 
-![[Pasted image 20230114210516.png]]
+<img width="774" alt="Pasted image 20230114210516" src="https://user-images.githubusercontent.com/34196370/212496691-1c7508a5-070d-4860-9e72-6d6b55d4e09f.png">
 
-![[Pasted image 20230114210556.png]]
+<img width="362" alt="Pasted image 20230114210556" src="https://user-images.githubusercontent.com/34196370/212496700-334b0f53-d087-457c-86d2-caa141a00e2a.png">
