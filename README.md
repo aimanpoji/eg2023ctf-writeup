@@ -399,11 +399,14 @@ Lets view the content of `script.js` file and we found strings which could be th
 
 <img width="1012" alt="Pasted image 20230114205616" src="https://user-images.githubusercontent.com/34196370/212496659-7c5db2fb-5621-4bcf-916f-059ca16a91ba.png">
 
-Test the credential found at the login page and we will be redirected to different page sourceorsauce/memberjaya.php:
+Test the credential found at the login page and we will be redirected to different page sourceorsauce/memberjaya.php which return to a 404 page:
 
 <img width="444" alt="Pasted image 20230114205914" src="https://user-images.githubusercontent.com/34196370/212496674-181ac551-f825-4f8b-a984-92956e860367.png">
 
 <img width="836" alt="Pasted image 20230114210112" src="https://user-images.githubusercontent.com/34196370/212496683-9494cb4e-1bfc-44af-bec3-07f7c87045b4.png">
+
+<img width="804" alt="image" src="https://user-images.githubusercontent.com/34196370/212497130-4d6d11a6-38f5-407b-906f-5258e6ecfd79.png">
+
 
 Go to  `digitalkarma/memberjaya.php` instead of `sourceorsauce/memberjaya.php`and we are through:
 
