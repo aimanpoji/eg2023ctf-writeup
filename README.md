@@ -203,7 +203,7 @@ GIMMEH X
 KTHXBYE
 ```
 
-We want the passcode, hence we can ignore teh code from line 12 until line 17 as it held nothing to solving the passcode. The passcode consist of 4 equations and the values respectively:
+We want the passcode, hence we can ignore the code from line 12 until line 17 as it held nothing to solving the passcode. The passcode consist of 4 equations and the values respectively:
 
 ```
 SUM OF A AN B = 8668
@@ -393,7 +393,7 @@ But the content in both directory returns:
 
 From the hint, we know that there is js script somewhere. So we can fuzz recursively for js file using ffuf with this [wordlist]([https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/SVNDigger/cat/Language/js.txt](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/SVNDigger/cat/Language/js.txt)) at admin/user/ and admin/pass/. Aha, we got a hit at admin/user/ there is a file named `script.js`:
 
-<img width="650" alt="Pasted image 20230114204912" src="https://user-images.githubusercontent.com/34196370/212496651-5bbf4715-a17c-46e5-853d-30746611332b.png">
+<img width="452" alt="Pasted image 20230114205312" src="https://user-images.githubusercontent.com/34196370/212497025-d3e0fa80-d99d-4e3c-a58b-09fd91e1ec68.png">
 
 Lets view the content of `script.js` file and we found strings which could be the username and password for the login page:
 
